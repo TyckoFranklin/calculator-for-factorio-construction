@@ -1,10 +1,19 @@
 import React from 'react';
-import logo from './logo.svg';
+import logo from '../logo.svg';
 import './App.css';
 
-function App() {
+function App(props) {
+    props.demo("hey there!!!!");
   return (
     <div className="App">
+    {
+        /*
+            Menu Bar Component
+            Side Bar Component
+            Main area content component
+        */
+
+    }
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
