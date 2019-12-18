@@ -1,0 +1,8 @@
+.content {
+    position: absolute;
+    width: 80vw;
+    height: calc(100vh - 3rem);
+    top: 3rem;
+    left: 20vw;
+    background: #333333;
+}
