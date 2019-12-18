@@ -1,8 +1,39 @@
 .content {
+    display: flex;
+    justify-content: center;
     position: absolute;
     width: 80vw;
     height: calc(100vh - 3rem);
     top: 3rem;
     left: 20vw;
     background: #333333;
+}
+
+.recipe {
+    width: 10rem;
+    height: 15rem;
+    position: relative;
+    background: #414141;
+    color: #9b9b9b;
+}
+
+#viewedItem {
+    top: 45%;
+    background: #161616;
+}
+
+.requires {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    top: 15%;
+    position: absolute;
+}
+
+.usedFor {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    top: 75%;
+    position: absolute;
 }
