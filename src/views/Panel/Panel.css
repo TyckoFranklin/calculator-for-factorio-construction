@@ -1,0 +1,7 @@
+.panel {
+    position: absolute;
+    width: 20vw;
+    height: calc(100vh - 3rem);
+    top: 3rem;
+    background: #141414;
+}
