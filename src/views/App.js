@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from '../logo.svg';
 import './App.css';
 import Header from './Header/_Header'
 import Panel from './Panel/_Panel'

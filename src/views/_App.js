@@ -1,6 +1,6 @@
 import { connect } from "react-redux";
 import App from './App';
-import * as actions from '../store/redux/actions'
+import * as actions from 'store/redux/actions'
 
 
 
