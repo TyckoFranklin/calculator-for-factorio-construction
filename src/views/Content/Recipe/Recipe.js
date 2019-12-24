@@ -3,7 +3,7 @@ import './Recipe.css';
 
 /**
  *       Need to program for productivity modules.
- *       Need to insert constants and variables into below html.
+ *       Need to insert constants into below html.
  * @param {*} props 
  */
 

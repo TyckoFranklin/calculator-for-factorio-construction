@@ -4,4 +4,14 @@
     height: calc(100vh - 3rem);
     top: 3rem;
     background: #141414;
+    color: white;
+}
+
+.panel .entity-element {
+    cursor: pointer;
+}
+
+.panel .entity-element.selected {
+    font-size: 2rem;
+    color: green;
 }
