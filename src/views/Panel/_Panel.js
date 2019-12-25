@@ -6,15 +6,18 @@ import * as actions from '../../store/redux/actions'
 
 const mapStateToProps = (state) => {
     return {
-        slideshows : state.slideshows,
+        recipes : state.recipes,
+        entities : state.entities,
+        selectedEntity : state.selectedEntity, 
     };
 }
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        // createSlideshow: (payload)=>{
-        //     dispatch({type: actions.CREATE_SLIDESHOW, payload});
-        // }
+        setSelectedEntity: (payload)=>{
+            dispatch({type: actions.SET_SELECTED_ENTITY, payload});
+        },
+
     }
 }
 

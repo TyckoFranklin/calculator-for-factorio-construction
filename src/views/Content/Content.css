@@ -17,11 +17,6 @@
     color: #9b9b9b;
 }
 
-#viewedItem {
-    top: 45%;
-    background: #161616;
-}
-
 .requires {
     display: flex;
     justify-content: space-evenly;

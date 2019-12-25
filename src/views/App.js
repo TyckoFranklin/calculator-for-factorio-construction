@@ -5,7 +5,7 @@ import Panel from './Panel/_Panel'
 import Content from './Content/_Content'
 
 function App(props) {
-    props.demo("hey there!!!!");
+    // props.demo("hey there!!!!");
   return (
     <div className="App">
         <Header />

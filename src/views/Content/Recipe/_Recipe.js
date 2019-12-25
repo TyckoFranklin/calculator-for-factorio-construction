@@ -1,6 +1,6 @@
 import { connect } from "react-redux";
-import App from './App';
-import * as actions from 'store/redux/actions'
+import Recipe from './Recipe';
+import * as actions from '../../../store/redux/actions'
 
 
 
@@ -21,4 +21,4 @@ const mapDispatchToProps = (dispatch) => {
     }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default connect(mapStateToProps, mapDispatchToProps)(Recipe);

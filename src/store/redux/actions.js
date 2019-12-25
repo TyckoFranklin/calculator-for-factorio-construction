@@ -1,25 +1,3 @@
-export const LIST_SLIDESHOWS = "LIST_SLIDESHOWS";
-export const LIST_SLIDES = "LIST_SLIDES";
-export const LIST_PICTURES = "LIST_PICTURES";
-
-export const GET_USER_GUIDE = "GET_USER_GUIDE";
-
-export const CREATE_SLIDESHOW = "CREATE_SLIDESHOW";
-export const CREATE_SLIDE = "CREATE_SLIDE";
-export const CREATE_PICTURE = "CREATE_PICTURE";
-
-export const ADD_USER = "ADD_USER";
-export const ADD_SLIDESHOW = "ADD_SLIDESHOW";
-export const ADD_SLIDE = "ADD_SLIDE";
-export const ADD_PICTURE = "ADD_PICTURE";
-export const ADD_FILE = "ADD_FILE";
-export const CURRENT_USER = "CURRENT_USER";
-
-export const REPLACE_PROJECTS = "REPLACE_PROJECTS";
-
-export const DELETE_PROJECT = "DELETE_PROJECT";
-export const DELETE_SLIDE = "DELETE_SLIDE";
-export const REMOVE_SLIDE = "REMOVE_SLIDE";
-
-export const UPDATE_USER_GUIDE = "UPDATE_USER_GUIDE";
-export const UPDATE_SLIDE = "UPDATE_SLIDE";
+export const SET_ENTITIES = "SET_ENTITIES";
+export const SET_TABS = "SET_TABS";
+export const SET_SELECTED_ENTITY = "SET_SELECTED_ENTITY";
