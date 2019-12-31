@@ -8,7 +8,7 @@ const mapStateToProps = (state) => {
     return {
         recipes : state.recipes,
         entities : state.entities,
-        selectedEntity : state.selectedEntity, 
+        selectedEntity : state.selectedEntity,
     };
 }
 

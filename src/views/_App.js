@@ -12,9 +12,9 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        // demo: (payload) => {
-        //     dispatch({type: actions.UPDATE_SLIDE, payload})
-        // }
+        fetchRecipes: () => {
+            dispatch({type: actions.FETCH_RECIPES})
+        }
         // createSlideshow: (payload)=>{
         //     dispatch({type: actions.CREATE_SLIDESHOW, payload});
         // }
