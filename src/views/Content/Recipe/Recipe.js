@@ -8,13 +8,14 @@ import './Recipe.css';
  */
 
 function Recipe(props) {
+    const { item, entities, id } = props;
     let perSecond = 0;
     return (
-        <div className="recipe" id="viewedItem">
-            Engine unit (amount per second input)
-            <div>Gear (amount) {perSecond}</div>
-            <div>Pipe (amount) (amount per second)</div>
-            <div>Steel plate (amount) (amount per second)</div>
+        <div className="recipe" id={id} >
+            {entities.get(item) ? entities.get(item).name : "startup"} (id === "viewedItem" ? input : amount per second)
+            <div>Gear (amount) (gearPerSecond)</div>
+            <div>Pipe (amount) (pipePerSecond)</div>
+            <div>Steel plate (amount) (steelPerSecond)</div>
             <div>Crafting speed input</div>
         </div>
     );

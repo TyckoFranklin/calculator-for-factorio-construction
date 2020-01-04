@@ -6,7 +6,8 @@ import * as actions from '../../../store/redux/actions'
 
 const mapStateToProps = (state) => {
     return {
-        slideshows : state.slideshows,
+        recipes : state.recipes,
+        entities : state.entities,
     };
 }
 
