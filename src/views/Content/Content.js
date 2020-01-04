@@ -5,8 +5,8 @@ import Recipe from './Recipe/_Recipe'
 function Content(props) {
     return (
         <div className="content">
-            <Recipe />
-            <div className="requires">
+            <Recipe id="viewedItem" item={props.selectedEntity}/>
+            {/* <div className="requires">
                 <div className="recipe">
                     Gear
                     <div>Iron plate (amount) (amount per second)</div>
@@ -20,7 +20,7 @@ function Content(props) {
                 <div className="recipe">Car</div>
                 <div className="recipe">Electric engine unit</div>
                 <div className="recipe">Tank</div>
-            </div>
+            </div> */}
         </div>
     );
 }
