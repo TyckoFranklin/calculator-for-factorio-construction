@@ -13,9 +13,17 @@ export const tabs = (state = new Map([["a","b"],["c","d"]]), action) =>
 export const selectedEntity = (state = "", action) =>
     action.type === A.SET_SELECTED_ENTITY ? action.payload : state;
 
+export const loading = (state = new Set(), action) =>
+    action.type === A.SET_LOADING ? action.payload : state;
+
+export const loadedComponents = (state = new Set(), action) =>
+    action.type === A.SET_LOADED_COMPONENTS ? action.payload : state;
+
 export default combineReducers({
     entities,
     recipes,
     tabs,
     selectedEntity,
+    loading,
+    loadedComponents,
 });

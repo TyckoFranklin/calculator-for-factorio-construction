@@ -1,13 +1,15 @@
 import { put, takeEvery, select, call } from 'redux-saga/effects'
 import * as actions from '../redux/actions';
-// import { API, graphqlOperation, Auth, Storage } from 'aws-amplify';
+import {addLoading,removeLoading} from './loadingUtilities';
+import { API, graphqlOperation, Auth, Storage } from 'aws-amplify';
 // import * as mutations from '../../graphql/mutations'
 // import * as queries from '../../graphql/queries'
 import { fetchRecipes } from 'network/fetchRecipes';
 import uuid from 'uuid';
 
 function* getRecipes(action) {
-
+    const loadingId = {};
+    yield call(addLoading, loadingId);
     try {
         const results = yield call(fetchRecipes);
 
@@ -56,7 +58,7 @@ function* getRecipes(action) {
         console.error(e);
     }
 
-
+    yield call(removeLoading, loadingId);
     /*
 
     We call the api to get the data want

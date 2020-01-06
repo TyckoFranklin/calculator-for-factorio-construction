@@ -2,9 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './views/_App';
+import Amplify from 'aws-amplify';
 import * as serviceWorker from './serviceWorker';
 import { Provider } from "react-redux";
 import store from './store/redux/store';
+
+import aws_exports from './aws-exports';
+Amplify.configure(aws_exports);
 
 ReactDOM.render(<Provider store={store}><App /></Provider>, document.getElementById('root'));
 
