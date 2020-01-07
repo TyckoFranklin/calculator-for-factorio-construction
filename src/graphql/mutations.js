@@ -11,6 +11,26 @@ export const createEntity = `mutation CreateEntity($input: CreateEntityInput!) {
       id
       gameId
       entities {
+        items {
+          id
+          gameId
+          name
+          wiki_link
+          gameItemType {
+            id
+            gameId
+            owner
+          }
+          category {
+            id
+            gameId
+            owner
+          }
+          recipes {
+            nextToken
+          }
+          owner
+        }
         nextToken
       }
       owner
@@ -19,6 +39,26 @@ export const createEntity = `mutation CreateEntity($input: CreateEntityInput!) {
       id
       gameId
       entities {
+        items {
+          id
+          gameId
+          name
+          wiki_link
+          gameItemType {
+            id
+            gameId
+            owner
+          }
+          category {
+            id
+            gameId
+            owner
+          }
+          recipes {
+            nextToken
+          }
+          owner
+        }
         nextToken
       }
       owner
@@ -28,6 +68,35 @@ export const createEntity = `mutation CreateEntity($input: CreateEntityInput!) {
         id
         time
         yield
+        ingredients {
+          items {
+            id
+            gameId
+            amount
+            owner
+          }
+          nextToken
+        }
+        entity {
+          id
+          gameId
+          name
+          wiki_link
+          gameItemType {
+            id
+            gameId
+            owner
+          }
+          category {
+            id
+            gameId
+            owner
+          }
+          recipes {
+            nextToken
+          }
+          owner
+        }
         owner
       }
       nextToken
@@ -46,6 +115,26 @@ export const updateEntity = `mutation UpdateEntity($input: UpdateEntityInput!) {
       id
       gameId
       entities {
+        items {
+          id
+          gameId
+          name
+          wiki_link
+          gameItemType {
+            id
+            gameId
+            owner
+          }
+          category {
+            id
+            gameId
+            owner
+          }
+          recipes {
+            nextToken
+          }
+          owner
+        }
         nextToken
       }
       owner
@@ -54,6 +143,26 @@ export const updateEntity = `mutation UpdateEntity($input: UpdateEntityInput!) {
       id
       gameId
       entities {
+        items {
+          id
+          gameId
+          name
+          wiki_link
+          gameItemType {
+            id
+            gameId
+            owner
+          }
+          category {
+            id
+            gameId
+            owner
+          }
+          recipes {
+            nextToken
+          }
+          owner
+        }
         nextToken
       }
       owner
@@ -63,6 +172,35 @@ export const updateEntity = `mutation UpdateEntity($input: UpdateEntityInput!) {
         id
         time
         yield
+        ingredients {
+          items {
+            id
+            gameId
+            amount
+            owner
+          }
+          nextToken
+        }
+        entity {
+          id
+          gameId
+          name
+          wiki_link
+          gameItemType {
+            id
+            gameId
+            owner
+          }
+          category {
+            id
+            gameId
+            owner
+          }
+          recipes {
+            nextToken
+          }
+          owner
+        }
         owner
       }
       nextToken
@@ -81,6 +219,26 @@ export const deleteEntity = `mutation DeleteEntity($input: DeleteEntityInput!) {
       id
       gameId
       entities {
+        items {
+          id
+          gameId
+          name
+          wiki_link
+          gameItemType {
+            id
+            gameId
+            owner
+          }
+          category {
+            id
+            gameId
+            owner
+          }
+          recipes {
+            nextToken
+          }
+          owner
+        }
         nextToken
       }
       owner
@@ -89,6 +247,26 @@ export const deleteEntity = `mutation DeleteEntity($input: DeleteEntityInput!) {
       id
       gameId
       entities {
+        items {
+          id
+          gameId
+          name
+          wiki_link
+          gameItemType {
+            id
+            gameId
+            owner
+          }
+          category {
+            id
+            gameId
+            owner
+          }
+          recipes {
+            nextToken
+          }
+          owner
+        }
         nextToken
       }
       owner
@@ -98,6 +276,35 @@ export const deleteEntity = `mutation DeleteEntity($input: DeleteEntityInput!) {
         id
         time
         yield
+        ingredients {
+          items {
+            id
+            gameId
+            amount
+            owner
+          }
+          nextToken
+        }
+        entity {
+          id
+          gameId
+          name
+          wiki_link
+          gameItemType {
+            id
+            gameId
+            owner
+          }
+          category {
+            id
+            gameId
+            owner
+          }
+          recipes {
+            nextToken
+          }
+          owner
+        }
         owner
       }
       nextToken
@@ -116,6 +323,42 @@ export const createRecipe = `mutation CreateRecipe($input: CreateRecipeInput!) {
         id
         gameId
         amount
+        recipe {
+          id
+          time
+          yield
+          ingredients {
+            nextToken
+          }
+          entity {
+            id
+            gameId
+            name
+            wiki_link
+            owner
+          }
+          owner
+        }
+        entity {
+          id
+          gameId
+          name
+          wiki_link
+          gameItemType {
+            id
+            gameId
+            owner
+          }
+          category {
+            id
+            gameId
+            owner
+          }
+          recipes {
+            nextToken
+          }
+          owner
+        }
         owner
       }
       nextToken
@@ -128,14 +371,50 @@ export const createRecipe = `mutation CreateRecipe($input: CreateRecipeInput!) {
       gameItemType {
         id
         gameId
+        entities {
+          items {
+            id
+            gameId
+            name
+            wiki_link
+            owner
+          }
+          nextToken
+        }
         owner
       }
       category {
         id
         gameId
+        entities {
+          items {
+            id
+            gameId
+            name
+            wiki_link
+            owner
+          }
+          nextToken
+        }
         owner
       }
       recipes {
+        items {
+          id
+          time
+          yield
+          ingredients {
+            nextToken
+          }
+          entity {
+            id
+            gameId
+            name
+            wiki_link
+            owner
+          }
+          owner
+        }
         nextToken
       }
       owner
@@ -154,6 +433,42 @@ export const updateRecipe = `mutation UpdateRecipe($input: UpdateRecipeInput!) {
         id
         gameId
         amount
+        recipe {
+          id
+          time
+          yield
+          ingredients {
+            nextToken
+          }
+          entity {
+            id
+            gameId
+            name
+            wiki_link
+            owner
+          }
+          owner
+        }
+        entity {
+          id
+          gameId
+          name
+          wiki_link
+          gameItemType {
+            id
+            gameId
+            owner
+          }
+          category {
+            id
+            gameId
+            owner
+          }
+          recipes {
+            nextToken
+          }
+          owner
+        }
         owner
       }
       nextToken
@@ -166,14 +481,50 @@ export const updateRecipe = `mutation UpdateRecipe($input: UpdateRecipeInput!) {
       gameItemType {
         id
         gameId
+        entities {
+          items {
+            id
+            gameId
+            name
+            wiki_link
+            owner
+          }
+          nextToken
+        }
         owner
       }
       category {
         id
         gameId
+        entities {
+          items {
+            id
+            gameId
+            name
+            wiki_link
+            owner
+          }
+          nextToken
+        }
         owner
       }
       recipes {
+        items {
+          id
+          time
+          yield
+          ingredients {
+            nextToken
+          }
+          entity {
+            id
+            gameId
+            name
+            wiki_link
+            owner
+          }
+          owner
+        }
         nextToken
       }
       owner
@@ -192,6 +543,42 @@ export const deleteRecipe = `mutation DeleteRecipe($input: DeleteRecipeInput!) {
         id
         gameId
         amount
+        recipe {
+          id
+          time
+          yield
+          ingredients {
+            nextToken
+          }
+          entity {
+            id
+            gameId
+            name
+            wiki_link
+            owner
+          }
+          owner
+        }
+        entity {
+          id
+          gameId
+          name
+          wiki_link
+          gameItemType {
+            id
+            gameId
+            owner
+          }
+          category {
+            id
+            gameId
+            owner
+          }
+          recipes {
+            nextToken
+          }
+          owner
+        }
         owner
       }
       nextToken
@@ -204,14 +591,50 @@ export const deleteRecipe = `mutation DeleteRecipe($input: DeleteRecipeInput!) {
       gameItemType {
         id
         gameId
+        entities {
+          items {
+            id
+            gameId
+            name
+            wiki_link
+            owner
+          }
+          nextToken
+        }
         owner
       }
       category {
         id
         gameId
+        entities {
+          items {
+            id
+            gameId
+            name
+            wiki_link
+            owner
+          }
+          nextToken
+        }
         owner
       }
       recipes {
+        items {
+          id
+          time
+          yield
+          ingredients {
+            nextToken
+          }
+          entity {
+            id
+            gameId
+            name
+            wiki_link
+            owner
+          }
+          owner
+        }
         nextToken
       }
       owner
@@ -225,11 +648,30 @@ export const createIngredient = `mutation CreateIngredient($input: CreateIngredi
     id
     gameId
     amount
-    entity {
+    recipe {
       id
       time
       yield
       ingredients {
+        items {
+          id
+          gameId
+          amount
+          recipe {
+            id
+            time
+            yield
+            owner
+          }
+          entity {
+            id
+            gameId
+            name
+            wiki_link
+            owner
+          }
+          owner
+        }
         nextToken
       }
       entity {
@@ -237,7 +679,88 @@ export const createIngredient = `mutation CreateIngredient($input: CreateIngredi
         gameId
         name
         wiki_link
+        gameItemType {
+          id
+          gameId
+          entities {
+            nextToken
+          }
+          owner
+        }
+        category {
+          id
+          gameId
+          entities {
+            nextToken
+          }
+          owner
+        }
+        recipes {
+          items {
+            id
+            time
+            yield
+            owner
+          }
+          nextToken
+        }
         owner
+      }
+      owner
+    }
+    entity {
+      id
+      gameId
+      name
+      wiki_link
+      gameItemType {
+        id
+        gameId
+        entities {
+          items {
+            id
+            gameId
+            name
+            wiki_link
+            owner
+          }
+          nextToken
+        }
+        owner
+      }
+      category {
+        id
+        gameId
+        entities {
+          items {
+            id
+            gameId
+            name
+            wiki_link
+            owner
+          }
+          nextToken
+        }
+        owner
+      }
+      recipes {
+        items {
+          id
+          time
+          yield
+          ingredients {
+            nextToken
+          }
+          entity {
+            id
+            gameId
+            name
+            wiki_link
+            owner
+          }
+          owner
+        }
+        nextToken
       }
       owner
     }
@@ -250,11 +773,30 @@ export const updateIngredient = `mutation UpdateIngredient($input: UpdateIngredi
     id
     gameId
     amount
-    entity {
+    recipe {
       id
       time
       yield
       ingredients {
+        items {
+          id
+          gameId
+          amount
+          recipe {
+            id
+            time
+            yield
+            owner
+          }
+          entity {
+            id
+            gameId
+            name
+            wiki_link
+            owner
+          }
+          owner
+        }
         nextToken
       }
       entity {
@@ -262,7 +804,88 @@ export const updateIngredient = `mutation UpdateIngredient($input: UpdateIngredi
         gameId
         name
         wiki_link
+        gameItemType {
+          id
+          gameId
+          entities {
+            nextToken
+          }
+          owner
+        }
+        category {
+          id
+          gameId
+          entities {
+            nextToken
+          }
+          owner
+        }
+        recipes {
+          items {
+            id
+            time
+            yield
+            owner
+          }
+          nextToken
+        }
         owner
+      }
+      owner
+    }
+    entity {
+      id
+      gameId
+      name
+      wiki_link
+      gameItemType {
+        id
+        gameId
+        entities {
+          items {
+            id
+            gameId
+            name
+            wiki_link
+            owner
+          }
+          nextToken
+        }
+        owner
+      }
+      category {
+        id
+        gameId
+        entities {
+          items {
+            id
+            gameId
+            name
+            wiki_link
+            owner
+          }
+          nextToken
+        }
+        owner
+      }
+      recipes {
+        items {
+          id
+          time
+          yield
+          ingredients {
+            nextToken
+          }
+          entity {
+            id
+            gameId
+            name
+            wiki_link
+            owner
+          }
+          owner
+        }
+        nextToken
       }
       owner
     }
@@ -275,11 +898,30 @@ export const deleteIngredient = `mutation DeleteIngredient($input: DeleteIngredi
     id
     gameId
     amount
-    entity {
+    recipe {
       id
       time
       yield
       ingredients {
+        items {
+          id
+          gameId
+          amount
+          recipe {
+            id
+            time
+            yield
+            owner
+          }
+          entity {
+            id
+            gameId
+            name
+            wiki_link
+            owner
+          }
+          owner
+        }
         nextToken
       }
       entity {
@@ -287,7 +929,88 @@ export const deleteIngredient = `mutation DeleteIngredient($input: DeleteIngredi
         gameId
         name
         wiki_link
+        gameItemType {
+          id
+          gameId
+          entities {
+            nextToken
+          }
+          owner
+        }
+        category {
+          id
+          gameId
+          entities {
+            nextToken
+          }
+          owner
+        }
+        recipes {
+          items {
+            id
+            time
+            yield
+            owner
+          }
+          nextToken
+        }
         owner
+      }
+      owner
+    }
+    entity {
+      id
+      gameId
+      name
+      wiki_link
+      gameItemType {
+        id
+        gameId
+        entities {
+          items {
+            id
+            gameId
+            name
+            wiki_link
+            owner
+          }
+          nextToken
+        }
+        owner
+      }
+      category {
+        id
+        gameId
+        entities {
+          items {
+            id
+            gameId
+            name
+            wiki_link
+            owner
+          }
+          nextToken
+        }
+        owner
+      }
+      recipes {
+        items {
+          id
+          time
+          yield
+          ingredients {
+            nextToken
+          }
+          entity {
+            id
+            gameId
+            name
+            wiki_link
+            owner
+          }
+          owner
+        }
+        nextToken
       }
       owner
     }
@@ -305,6 +1028,31 @@ export const createCategory = `mutation CreateCategory($input: CreateCategoryInp
         gameId
         name
         wiki_link
+        gameItemType {
+          id
+          gameId
+          entities {
+            nextToken
+          }
+          owner
+        }
+        category {
+          id
+          gameId
+          entities {
+            nextToken
+          }
+          owner
+        }
+        recipes {
+          items {
+            id
+            time
+            yield
+            owner
+          }
+          nextToken
+        }
         owner
       }
       nextToken
@@ -323,6 +1071,31 @@ export const updateCategory = `mutation UpdateCategory($input: UpdateCategoryInp
         gameId
         name
         wiki_link
+        gameItemType {
+          id
+          gameId
+          entities {
+            nextToken
+          }
+          owner
+        }
+        category {
+          id
+          gameId
+          entities {
+            nextToken
+          }
+          owner
+        }
+        recipes {
+          items {
+            id
+            time
+            yield
+            owner
+          }
+          nextToken
+        }
         owner
       }
       nextToken
@@ -341,6 +1114,31 @@ export const deleteCategory = `mutation DeleteCategory($input: DeleteCategoryInp
         gameId
         name
         wiki_link
+        gameItemType {
+          id
+          gameId
+          entities {
+            nextToken
+          }
+          owner
+        }
+        category {
+          id
+          gameId
+          entities {
+            nextToken
+          }
+          owner
+        }
+        recipes {
+          items {
+            id
+            time
+            yield
+            owner
+          }
+          nextToken
+        }
         owner
       }
       nextToken
@@ -359,6 +1157,31 @@ export const createGameItemType = `mutation CreateGameItemType($input: CreateGam
         gameId
         name
         wiki_link
+        gameItemType {
+          id
+          gameId
+          entities {
+            nextToken
+          }
+          owner
+        }
+        category {
+          id
+          gameId
+          entities {
+            nextToken
+          }
+          owner
+        }
+        recipes {
+          items {
+            id
+            time
+            yield
+            owner
+          }
+          nextToken
+        }
         owner
       }
       nextToken
@@ -377,6 +1200,31 @@ export const updateGameItemType = `mutation UpdateGameItemType($input: UpdateGam
         gameId
         name
         wiki_link
+        gameItemType {
+          id
+          gameId
+          entities {
+            nextToken
+          }
+          owner
+        }
+        category {
+          id
+          gameId
+          entities {
+            nextToken
+          }
+          owner
+        }
+        recipes {
+          items {
+            id
+            time
+            yield
+            owner
+          }
+          nextToken
+        }
         owner
       }
       nextToken
@@ -395,6 +1243,31 @@ export const deleteGameItemType = `mutation DeleteGameItemType($input: DeleteGam
         gameId
         name
         wiki_link
+        gameItemType {
+          id
+          gameId
+          entities {
+            nextToken
+          }
+          owner
+        }
+        category {
+          id
+          gameId
+          entities {
+            nextToken
+          }
+          owner
+        }
+        recipes {
+          items {
+            id
+            time
+            yield
+            owner
+          }
+          nextToken
+        }
         owner
       }
       nextToken

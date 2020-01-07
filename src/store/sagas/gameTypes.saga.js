@@ -5,12 +5,12 @@ import * as mutations from '../../graphql/mutations'
 import * as queries from '../../graphql/queries'
 import {addLoading,removeLoading} from './loadingUtilities';
 
-export function* fetchAllGameTypes(action) {
+function* fetchAllGameTypes(action) {
     const loadingId = {};
     yield call(addLoading, loadingId);
     try {
         /* get list of all game types and list of all types */
-        const result = yield API.graphql(graphqlOperation(queries.listGameItemTypes,{input:{limit:1000}}));
+        const result = yield API.graphql(graphqlOperation(queries.listGameItemTypes,{limit:1000}));
         console.log({result})
         const currentGameTypes = yield select(state=>state.gameTypes);
         const payload = new Map(currentGameTypes);
