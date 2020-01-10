@@ -5,6 +5,8 @@
     top: 3rem;
     background: #141414;
     color: white;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 .panel .entity-element {

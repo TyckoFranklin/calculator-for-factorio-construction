@@ -5,12 +5,35 @@ import * as mutations from '../../graphql/mutations'
 import * as queries from '../../graphql/queries'
 import {addLoading,removeLoading} from './loadingUtilities';
 
+const listRecipes = `query ListRecipes(
+    $filter: ModelrecipeFilterInput
+    $limit: Int
+    $nextToken: String
+) {
+    listRecipes(filter: $filter, limit: $limit, nextToken: $nextToken) {
+        items {
+            id
+            time
+            yield
+            ingredients {
+                items {
+                    id
+                }
+            }
+            entity {
+                id
+            }
+        }
+    }
+}
+`;
+
 function* fetchAllRecipes(action) {
     const loadingId = {};
     yield call(addLoading, loadingId);
     try {
         /* get list of all Recipes and list of all types */
-        const result = yield API.graphql(graphqlOperation(queries.listRecipes,{limit:1000}));
+        const result = yield API.graphql(graphqlOperation(listRecipes,{limit:1000}));
         console.log({result})
         const currentRecipes = yield select(state=>state.recipes);
         const payload = new Map(currentRecipes);

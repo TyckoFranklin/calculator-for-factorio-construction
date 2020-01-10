@@ -1,6 +1,6 @@
 import React from 'react';
 import './Content.css';
-import Recipe from './Recipe/_Recipe'
+import Recipe from './Entity/Recipe/_Recipe'
 
 function Content(props) {
     return (

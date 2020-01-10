@@ -4,11 +4,14 @@ import './Recipe.css';
 /**
  *       Need to program for productivity modules.
  *       Need to insert constants into below html.
- * @param {*} props 
+ * @param {*} props
  */
 
 function Recipe(props) {
     const { item, entities, id } = props;
+    if(entities.size === 0 || item === undefined || item === ""){
+        return null;
+    }
     let perSecond = 0;
     return (
         <div className="recipe" id={id} >
