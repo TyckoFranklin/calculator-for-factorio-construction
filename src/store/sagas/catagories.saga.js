@@ -5,12 +5,30 @@ import * as mutations from '../../graphql/mutations'
 import * as queries from '../../graphql/queries'
 import {addLoading,removeLoading} from './loadingUtilities';
 
+const listCategorys = `query ListCategorys(
+    $filter: ModelcategoryFilterInput
+    $limit: Int
+    $nextToken: String
+) {
+    listCategorys(filter: $filter, limit: $limit, nextToken: $nextToken) {
+        items {
+            id
+            gameId
+            entities {
+                items {
+                    id
+                }
+            }
+        }
+    }
+}`;
+
 function* fetchAllCategories(action) {
     const loadingId = {};
     yield call(addLoading, loadingId);
     try {
         /* get list of all categories and list of all types */
-        const result = yield API.graphql(graphqlOperation(queries.listCategorys,{limit:1000}));
+        const result = yield API.graphql(graphqlOperation(listCategorys,{limit:1000}));
         console.log({result})
         const currentCategories = yield select(state=>state.categories);
         const payload = new Map(currentCategories);
