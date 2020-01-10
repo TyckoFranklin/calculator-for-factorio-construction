@@ -5,31 +5,30 @@ import * as mutations from '../../graphql/mutations'
 import * as queries from '../../graphql/queries'
 import {addLoading,removeLoading} from './loadingUtilities';
 
-function* fetchAllCategories(action) {
+function* fetchAllEntities(action) {
     const loadingId = {};
     yield call(addLoading, loadingId);
     try {
-        /* get list of all categories and list of all types */
-        const result = yield API.graphql(graphqlOperation(queries.listCategorys,{limit:1000}));
+        /* get list of all Entities and list of all types */
+        const result = yield API.graphql(graphqlOperation(queries.listEntitys,{limit:1000}));
         console.log({result})
-        const currentCategories = yield select(state=>state.categories);
-        const payload = new Map(currentCategories);
-        for(const value of result.data.listCategorys.items){
+        const currentEntities = yield select(state=>state.Entities);
+        const payload = new Map(currentEntities);
+        for(const value of result.data.listEntitys.items){
             payload.set(value.id, value);
         }
         yield put({
-            type:actions.SET_CATEGORIES,
+            type:actions.SET_ENTITIES,
             payload,
         })
     }
     catch (e) {
-        console.error(e);
-    }
+        console.error(e);    }
 
     yield call(removeLoading, loadingId);
 }
 
-export function* watchFetchAllCategories() {
-    yield takeEvery(actions.FETCH_CATEGORIES, fetchAllCategories);
+export function* watchFetchAllEntities() {
+    yield takeEvery(actions.FETCH_ENTITIES, fetchAllEntities);
 }
 

@@ -4,6 +4,9 @@ import * as A from './actions';
 export const entities = (state = new Map(), action) =>
     action.type === A.SET_ENTITIES ? action.payload : state;
 
+export const entitiesJSON = (state = new Map(), action) =>
+    action.type === A.SET_ENTITIES_JSON ? action.payload : state;
+
 export const recipes = (state = new Map(), action) =>
     action.type === A.SET_RECIPES ? action.payload : state;
 
@@ -12,6 +15,9 @@ export const categories = (state = new Map(), action) =>
 
 export const gameTypes = (state = new Map(), action) =>
     action.type === A.SET_GAME_TYPES ? action.payload : state;
+
+export const ingredients = (state = new Map(), action) =>
+    action.type === A.SET_INGREDIENTS ? action.payload : state;
 
 export const selectedEntity = (state = "", action) =>
     action.type === A.SET_SELECTED_ENTITY ? action.payload : state;
@@ -25,7 +31,9 @@ export const loadedComponents = (state = new Set(), action) =>
 export default combineReducers({
     categories,
     entities,
+    entitiesJSON,
     gameTypes,
+    ingredients,
     loadedComponents,
     loading,
     recipes,

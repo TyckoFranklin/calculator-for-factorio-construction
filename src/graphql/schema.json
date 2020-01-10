@@ -1264,12 +1264,23 @@
           "isDeprecated" : false,
           "deprecationReason" : null
         }, {
-          "name" : "entity",
+          "name" : "recipe",
           "description" : null,
           "args" : [ ],
           "type" : {
             "kind" : "OBJECT",
             "name" : "recipe",
+            "ofType" : null
+          },
+          "isDeprecated" : false,
+          "deprecationReason" : null
+        }, {
+          "name" : "entity",
+          "description" : null,
+          "args" : [ ],
+          "type" : {
+            "kind" : "OBJECT",
+            "name" : "entity",
             "ofType" : null
           },
           "isDeprecated" : false,
@@ -2557,6 +2568,15 @@
           },
           "defaultValue" : null
         }, {
+          "name" : "ingredientRecipeId",
+          "description" : null,
+          "type" : {
+            "kind" : "SCALAR",
+            "name" : "ID",
+            "ofType" : null
+          },
+          "defaultValue" : null
+        }, {
           "name" : "ingredientEntityId",
           "description" : null,
           "type" : {
@@ -2611,6 +2631,15 @@
           "type" : {
             "kind" : "SCALAR",
             "name" : "String",
+            "ofType" : null
+          },
+          "defaultValue" : null
+        }, {
+          "name" : "ingredientRecipeId",
+          "description" : null,
+          "type" : {
+            "kind" : "SCALAR",
+            "name" : "ID",
             "ofType" : null
           },
           "defaultValue" : null

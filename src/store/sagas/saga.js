@@ -44,15 +44,15 @@ function* getRecipes(action) {
             entities.set(element.id, element);
         });
 
-        yield put({ type: actions.SET_ENTITIES, payload:entities });
+        yield put({ type: actions.SET_ENTITIES_JSON, payload:entities });
 
 
-        const recipes = new Map();
-        results.forEach(element => {
-            recipes.set(element.id, element.recipe);
-        });
+        // const recipes = new Map();
+        // results.forEach(element => {
+        //     recipes.set(element.id, element.recipe);
+        // });
 
-        yield put({ type: actions.SET_RECIPES, payload:recipes });
+        // yield put({ type: actions.SET_RECIPES, payload:recipes });
     }
     catch (e) {
         console.error(e);
