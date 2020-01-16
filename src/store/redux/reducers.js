@@ -22,6 +22,9 @@ export const ingredients = (state = new Map(), action) =>
 export const selectedEntity = (state = "", action) =>
     action.type === A.SET_SELECTED_ENTITY ? action.payload : state;
 
+export const perSecond = (state = "1", action) =>
+    action.type === A.SET_PER_SECOND ? action.payload : state;
+
 export const loading = (state = new Set(), action) =>
     action.type === A.SET_LOADING ? action.payload : state;
 
@@ -38,4 +41,5 @@ export default combineReducers({
     loading,
     recipes,
     selectedEntity,
+    perSecond,
 });
