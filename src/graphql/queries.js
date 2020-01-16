@@ -11,26 +11,6 @@ export const getEntity = `query GetEntity($id: ID!) {
       id
       gameId
       entities {
-        items {
-          id
-          gameId
-          name
-          wiki_link
-          gameItemType {
-            id
-            gameId
-            owner
-          }
-          category {
-            id
-            gameId
-            owner
-          }
-          recipes {
-            nextToken
-          }
-          owner
-        }
         nextToken
       }
       owner
@@ -39,26 +19,6 @@ export const getEntity = `query GetEntity($id: ID!) {
       id
       gameId
       entities {
-        items {
-          id
-          gameId
-          name
-          wiki_link
-          gameItemType {
-            id
-            gameId
-            owner
-          }
-          category {
-            id
-            gameId
-            owner
-          }
-          recipes {
-            nextToken
-          }
-          owner
-        }
         nextToken
       }
       owner
@@ -68,35 +28,6 @@ export const getEntity = `query GetEntity($id: ID!) {
         id
         time
         yield
-        ingredients {
-          items {
-            id
-            gameId
-            amount
-            owner
-          }
-          nextToken
-        }
-        entity {
-          id
-          gameId
-          name
-          wiki_link
-          gameItemType {
-            id
-            gameId
-            owner
-          }
-          category {
-            id
-            gameId
-            owner
-          }
-          recipes {
-            nextToken
-          }
-          owner
-        }
         owner
       }
       nextToken
@@ -119,51 +50,19 @@ export const listEntitys = `query ListEntitys(
       gameItemType {
         id
         gameId
-        entities {
-          items {
-            id
-            gameId
-            name
-            wiki_link
-            owner
-          }
-          nextToken
-        }
         owner
       }
       category {
         id
         gameId
-        entities {
-          items {
-            id
-            gameId
-            name
-            wiki_link
-            owner
-          }
-          nextToken
-        }
         owner
       }
       recipes {
         items {
-          id
-          time
-          yield
-          ingredients {
-            nextToken
-          }
-          entity {
             id
-            gameId
-            name
-            wiki_link
-            owner
-          }
-          owner
+            time
+            yield
         }
-        nextToken
       }
       owner
     }
@@ -181,42 +80,6 @@ export const getRecipe = `query GetRecipe($id: ID!) {
         id
         gameId
         amount
-        recipe {
-          id
-          time
-          yield
-          ingredients {
-            nextToken
-          }
-          entity {
-            id
-            gameId
-            name
-            wiki_link
-            owner
-          }
-          owner
-        }
-        entity {
-          id
-          gameId
-          name
-          wiki_link
-          gameItemType {
-            id
-            gameId
-            owner
-          }
-          category {
-            id
-            gameId
-            owner
-          }
-          recipes {
-            nextToken
-          }
-          owner
-        }
         owner
       }
       nextToken
@@ -229,50 +92,14 @@ export const getRecipe = `query GetRecipe($id: ID!) {
       gameItemType {
         id
         gameId
-        entities {
-          items {
-            id
-            gameId
-            name
-            wiki_link
-            owner
-          }
-          nextToken
-        }
         owner
       }
       category {
         id
         gameId
-        entities {
-          items {
-            id
-            gameId
-            name
-            wiki_link
-            owner
-          }
-          nextToken
-        }
         owner
       }
       recipes {
-        items {
-          id
-          time
-          yield
-          ingredients {
-            nextToken
-          }
-          entity {
-            id
-            gameId
-            name
-            wiki_link
-            owner
-          }
-          owner
-        }
         nextToken
       }
       owner
@@ -292,25 +119,6 @@ export const listRecipes = `query ListRecipes(
       time
       yield
       ingredients {
-        items {
-          id
-          gameId
-          amount
-          recipe {
-            id
-            time
-            yield
-            owner
-          }
-          entity {
-            id
-            gameId
-            name
-            wiki_link
-            owner
-          }
-          owner
-        }
         nextToken
       }
       entity {
@@ -318,31 +126,6 @@ export const listRecipes = `query ListRecipes(
         gameId
         name
         wiki_link
-        gameItemType {
-          id
-          gameId
-          entities {
-            nextToken
-          }
-          owner
-        }
-        category {
-          id
-          gameId
-          entities {
-            nextToken
-          }
-          owner
-        }
-        recipes {
-          items {
-            id
-            time
-            yield
-            owner
-          }
-          nextToken
-        }
         owner
       }
       owner
@@ -361,25 +144,6 @@ export const getIngredient = `query GetIngredient($id: ID!) {
       time
       yield
       ingredients {
-        items {
-          id
-          gameId
-          amount
-          recipe {
-            id
-            time
-            yield
-            owner
-          }
-          entity {
-            id
-            gameId
-            name
-            wiki_link
-            owner
-          }
-          owner
-        }
         nextToken
       }
       entity {
@@ -387,31 +151,6 @@ export const getIngredient = `query GetIngredient($id: ID!) {
         gameId
         name
         wiki_link
-        gameItemType {
-          id
-          gameId
-          entities {
-            nextToken
-          }
-          owner
-        }
-        category {
-          id
-          gameId
-          entities {
-            nextToken
-          }
-          owner
-        }
-        recipes {
-          items {
-            id
-            time
-            yield
-            owner
-          }
-          nextToken
-        }
         owner
       }
       owner
@@ -424,50 +163,14 @@ export const getIngredient = `query GetIngredient($id: ID!) {
       gameItemType {
         id
         gameId
-        entities {
-          items {
-            id
-            gameId
-            name
-            wiki_link
-            owner
-          }
-          nextToken
-        }
         owner
       }
       category {
         id
         gameId
-        entities {
-          items {
-            id
-            gameId
-            name
-            wiki_link
-            owner
-          }
-          nextToken
-        }
         owner
       }
       recipes {
-        items {
-          id
-          time
-          yield
-          ingredients {
-            nextToken
-          }
-          entity {
-            id
-            gameId
-            name
-            wiki_link
-            owner
-          }
-          owner
-        }
         nextToken
       }
       owner
@@ -490,35 +193,6 @@ export const listIngredients = `query ListIngredients(
         id
         time
         yield
-        ingredients {
-          items {
-            id
-            gameId
-            amount
-            owner
-          }
-          nextToken
-        }
-        entity {
-          id
-          gameId
-          name
-          wiki_link
-          gameItemType {
-            id
-            gameId
-            owner
-          }
-          category {
-            id
-            gameId
-            owner
-          }
-          recipes {
-            nextToken
-          }
-          owner
-        }
         owner
       }
       entity {
@@ -526,31 +200,6 @@ export const listIngredients = `query ListIngredients(
         gameId
         name
         wiki_link
-        gameItemType {
-          id
-          gameId
-          entities {
-            nextToken
-          }
-          owner
-        }
-        category {
-          id
-          gameId
-          entities {
-            nextToken
-          }
-          owner
-        }
-        recipes {
-          items {
-            id
-            time
-            yield
-            owner
-          }
-          nextToken
-        }
         owner
       }
       owner
@@ -569,31 +218,6 @@ export const getCategory = `query GetCategory($id: ID!) {
         gameId
         name
         wiki_link
-        gameItemType {
-          id
-          gameId
-          entities {
-            nextToken
-          }
-          owner
-        }
-        category {
-          id
-          gameId
-          entities {
-            nextToken
-          }
-          owner
-        }
-        recipes {
-          items {
-            id
-            time
-            yield
-            owner
-          }
-          nextToken
-        }
         owner
       }
       nextToken
@@ -612,26 +236,6 @@ export const listCategorys = `query ListCategorys(
       id
       gameId
       entities {
-        items {
-          id
-          gameId
-          name
-          wiki_link
-          gameItemType {
-            id
-            gameId
-            owner
-          }
-          category {
-            id
-            gameId
-            owner
-          }
-          recipes {
-            nextToken
-          }
-          owner
-        }
         nextToken
       }
       owner
@@ -650,31 +254,6 @@ export const getGameItemType = `query GetGameItemType($id: ID!) {
         gameId
         name
         wiki_link
-        gameItemType {
-          id
-          gameId
-          entities {
-            nextToken
-          }
-          owner
-        }
-        category {
-          id
-          gameId
-          entities {
-            nextToken
-          }
-          owner
-        }
-        recipes {
-          items {
-            id
-            time
-            yield
-            owner
-          }
-          nextToken
-        }
         owner
       }
       nextToken
@@ -693,26 +272,6 @@ export const listGameItemTypes = `query ListGameItemTypes(
       id
       gameId
       entities {
-        items {
-          id
-          gameId
-          name
-          wiki_link
-          gameItemType {
-            id
-            gameId
-            owner
-          }
-          category {
-            id
-            gameId
-            owner
-          }
-          recipes {
-            nextToken
-          }
-          owner
-        }
         nextToken
       }
       owner
