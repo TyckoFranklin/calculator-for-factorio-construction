@@ -1,6 +1,6 @@
 import { connect } from "react-redux";
-import Recipe from './Recipe';
-import * as actions from '../../../../store/redux/actions'
+import Control from './Control';
+import * as actions from '../../../store/redux/actions'
 
 
 
@@ -14,10 +14,10 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        setPerSecond: (payload)=>{
-            dispatch({type: actions.SET_PER_SECOND, payload});
-        },
+        setStepsShown: (payload)=>{
+            dispatch({type: actions.SET_STEPS_SHOWN, payload});
+        }
     }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Recipe);
+export default connect(mapStateToProps, mapDispatchToProps)(Control);

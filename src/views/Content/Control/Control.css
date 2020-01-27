@@ -1,0 +1,12 @@
+.control {
+    position: absolute;
+    background: #161616;
+    top: 2rem;
+    right: 10rem;
+    width: 10rem;
+}
+
+.steps {
+    width: 2rem;
+    margin-left: 1rem;
+}

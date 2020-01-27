@@ -7,6 +7,7 @@ import * as actions from '../../store/redux/actions'
 const mapStateToProps = (state) => {
     return {
         selectedEntity : state.selectedEntity,
+        stepsShown : state.stepsShown,
     };
 }
 
