@@ -1,4 +1,10 @@
-#viewedItem {
-    top: 45%;
+.recipe {
+    width: 10rem;
+    height: 15rem;
+    position: relative;
+    background: #414141;
+}
+
+.viewedItem {
     background: #161616;
 }

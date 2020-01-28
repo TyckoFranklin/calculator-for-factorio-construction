@@ -3,12 +3,11 @@ import './Recipe.css';
 
 /**
  *       Need to program for productivity modules.
- *       Need to insert constants into below html.
  * @param {*} props
  */
 
 function Recipe(props) {
-    const { item, entities, className, perSecond, setPerSecond, id } = props;
+    const { item, entities, className, perSecond, setPerSecond } = props;
     const handleChange = (event) => setPerSecond(event.target.value);
     if(entities.size === 0 || item === undefined || item === ""){
         return null;
